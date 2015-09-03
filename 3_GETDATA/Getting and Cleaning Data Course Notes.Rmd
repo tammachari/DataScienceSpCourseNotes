@@ -293,7 +293,7 @@ $\pagebreak$
     * each row corresponds to a line of the data you received
 * **GitHub example ([tutorial](https://github.com/hadley/httr/blob/master/demo/oauth2-github.r))**:
     * `library(httr)`
-    * `myapp <- oauth_app("github", key = "clientID", secrete = "clientSecret")`
+    * `myapp <- oauth_app("github", key = "clientID", secret = "clientSecret")`
 		* an application must be registered with GitHub first to generate the client ID and secrets
     * `github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)`
 		* `oauth_endpoints()` = returns the the authorize/access url/endpoints for some common web applications (GitHub, Facebook, google, etc)
@@ -378,7 +378,7 @@ $\pagebreak$
 		* can specify multiple values to sort by by using `,`
 		* order listed in the call will be the order that the data is sorted by (can use in conjunction with `desc()`)
     * `rename()`
-		* *example*: `rename(dataFrameTable, colName = newColName)` = renames the specified column with new name
+		* *example*: `rename(dataFrameTable, newColName = colName)` = renames the specified column with new name
 		* capable of renaming multiple columns at the same time, no quotes needed
     * `mutate()`
 		* create a new variable based on the value of one or more existing variables in the dataset
